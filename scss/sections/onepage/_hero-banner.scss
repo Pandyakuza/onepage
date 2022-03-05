@@ -1,0 +1,71 @@
+@use "../../components/" as c;
+
+/*--------------------------------------------------------------
+# HERO BANNER ANIMATED SECTION --- WisePanda.fr
+--------------------------------------------------------------*/
+
+.hero-animated{
+    width: 100%;
+    min-height: 50vh;
+    background:url("../img/hero-banner/hero-bg.png") center center;
+    background-size: cover;
+    position: relative;
+    padding: 120px 0 60px;
+    h2{
+        margin: 0 0 10 0;
+        font-size: 3rem;
+        font-weight: 300;
+        color: c.$color-default;
+        font-family: c.$font-default;
+        span{
+            color: c.$color-primary;
+        }
+    }
+    p{
+        color: rgba(c.$color-default, 0.8);
+        margin: 0 0 30px 0;
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+}
+
+// OPTIMISATION RESPOCIVE DESIGN
+
+@media(min-width: 992px) {
+    .hero-animated{
+        .animated{
+            max-width: 45%;
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    .hero-animated{
+        .animated{
+            max-width: 60%;
+        }
+    }
+}
+
+@media(max-width: 640px) {
+    .hero-animated{
+        .h2{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.125rem;
+            margin-bottom: 30px;
+        }
+        .btn--hero-contact, .btn--watch-video{
+            font-size: 0.875rem;
+        }
+    }
+}
+
+@media(max-width: 575px) {
+    .hero-animated{
+        .animated{
+            max-width: 80%;
+        }
+    }
+}

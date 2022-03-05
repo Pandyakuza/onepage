@@ -1,0 +1,67 @@
+@use "./colors" as c;
+
+/*--------------------------------------------------------------
+# MIXINS COMPONENTS --- WisePanda.fr
+--------------------------------------------------------------*/
+
+// Gradient miwin
+@mixin gradient {
+    background: linear-gradient(to right, rgba(c.$color-default-dark, 0.95)
+    rgba(c.$wpfr-body-bg, 0.95)
+    );
+}
+
+// Position-absolute d.flex justify-content-center align-items-center
+@mixin absoFlexCenterCenter {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// d.inlineflex justify-content-center align-items-center
+@mixin inFlexCenterCenter {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// d.flex justify-content-center align-items-center f.direction-col
+@mixin FlexCenterCenterCol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+// position relative d.flex f.direction-col
+@mixin relaFlexCol {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+// d.flex justify-content-space-between align-items-center
+@mixin FlexBetweenCenter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// position relative d.flex justify-content-space-between align-items-center
+@mixin relFlexBetweenCenter {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// ul style d.flex ls.none align-items-center
+@mixin flexCenterNone {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+

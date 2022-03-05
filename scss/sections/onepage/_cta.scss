@@ -1,0 +1,67 @@
+@use "../../components/" as c;
+/*--------------------------------------------------------------
+# CALL-TO-ACTION SECTION --- WisePanda.fr 
+--------------------------------------------------------------*/
+
+.cta{
+    padding: 0;
+    margin-bottom: 60px;
+    .container{
+        padding: 80px;
+        background: rgba(c.$color-secondary-light, 0.1);
+        border-radius: 15px;
+        .content{
+            h3{
+                color: c.$color-secondary-light;
+                font-size: 3rem;
+                font-weight: 700;
+            }
+            em{
+                font-style: normal;
+                position: relative;
+                &::after{
+                    content:"";
+                    position:absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 17px;
+                    height: 10px;
+                    background: rgba(c.$color-primary-light, 0.5);
+                    z-index: -1;
+                }
+            }
+            p{
+                color: c.$color-default;
+                font-weight: 600;
+                font-size: 1.125rem;
+            }
+        }
+        .img{
+            &__cta{
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    inset:0;
+                    background: rgba(c.$color-default, 0.5);
+                    border-radius: 15px;
+                    transform: rotate(12deg);
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    inset:0;
+                    background: rgba(c.$color-default, 0.5);
+                    border-radius: 15px;
+                    transform: rotate(6deg);
+                }
+                img{
+                    position: relative;
+                    z-index: 3;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+
+}

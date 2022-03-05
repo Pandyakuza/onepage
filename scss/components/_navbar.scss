@@ -1,0 +1,132 @@
+@use "./colors" as c;
+@use "./fonts" as f;
+@use "./mixins" as m;
+
+/*--------------------------------------------------------------
+# NAVBAR COMPONENTS --- WisePanda.fr
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# DESKTOP NAVIGATION --- WisePanda.fr
+--------------------------------------------------------------*/
+
+@media (min-width:1280px){
+    .navbar{
+        padding: 0;
+        ul{
+            @include m.flexCenterNone;
+            li{
+                position: relative;
+            }
+        }
+        > ul > li {
+            white-space: nowrap;
+        }
+        a, a:focus{
+            @include m.relFlexBetweenCenter;
+            padding: 14px 20px;
+            font-family: f.$font-default;
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgba(c.$color-default-dark, 0.7);
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+        > ul > li > a:before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: c.$color-primary-dark;
+            visibility: hidden;
+            transform: scale(0);
+            transition: all 0.3s ease-in-out 0s;
+        }
+        a:hover:before, li:hover > a:before, .active:before {
+            visibility: visible;
+            transform: scale(0.7);
+        }
+        a:hover, .active, .active:focus, li:hover > a{
+            color: c.$color-primary-dark;
+        }
+        }
+    }
+
+
+    /*--------------------------------------------------------------
+# MOBILE NAVIGATION --- WisePanda.fr
+--------------------------------------------------------------*/
+
+@media (max-width: 1279px){
+    .navbar{
+        position: fixed;
+        top: 0;
+        left: -100;
+        width: calc(100% - 70px);
+        bottom: 0;
+        transition: 0.3s;
+        z-index: 9997;
+        ul{
+            position: absolute;
+            inset: 0;
+            padding: 10px 0;
+            margin: 0;
+            background: rgba(c.$color-default-dark, 0.9);
+            overflow-y: auto;
+            transition: 0.3s;
+            z-index: 9998;
+        }
+        a, a:focus{
+            @include m.relFlexBetweenCenter;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: rgba(c.$color-default, 0.7);
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+        a i, a:focus i {
+            font-size: 0.75rem;
+            line-height: 0;
+            margin-left: 5px;
+        }
+        a:hover, .active, .active:focus, li:hover > a{
+            color: c.$color-default;
+        }
+        .mobile-nav-toggle{
+            display: block !important;
+            color: c.$color-default-dark;
+            font-size: 1.75rem;
+            cursor: pointer;
+            line-height: 0;
+            transition: 0.5s;
+            position: fixed;
+            top: 20px;
+            z-index: 9999;
+            right: 20px;
+            &.bi-x{
+                color: c.$color-default-dark;
+            }
+        }
+    }
+
+    // Add class .mobile-nav-active on <body> with JS
+
+    .mobile-nav-active{
+        overflow: hidden;
+        z-index: 9995;
+        position: relative;
+        .navbar{
+            left: 0;
+            &::before{
+                content: "";
+                position: fixed;
+                inset: 0;
+                background: rgba(c.$color-secondary, 0.8);
+                z-index: 9996;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@use "./fonts" as f;
+@use "./colors" as c;
+/*--------------------------------------------------------------
+# GENERAL COMPONENTS --- WisePanda.fr
+--------------------------------------------------------------*/
+
+:root{
+    scroll-behavior: smooth;
+}
+
+a{
+    color: c.$color-primary-dark;
+    text-decoration: none;
+    &:hover{
+        color: c.$color-primary-light;
+        text-decoration: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: f.$font-default;
+}
+
+p, li {
+    color: c.$color-default;
+}
+
+body{
+    background: c.$wpfr-body-bg;
+}

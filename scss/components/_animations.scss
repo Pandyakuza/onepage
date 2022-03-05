@@ -1,0 +1,18 @@
+/*--------------------------------------------------------------
+# ANIMATION COMPONENTS --- WisePanda.fr
+--------------------------------------------------------------*/
+//Hero-Baner up and Down animation
+
+.animated{
+    margin-bottom: 60px;
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}

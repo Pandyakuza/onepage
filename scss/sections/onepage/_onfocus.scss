@@ -1,0 +1,56 @@
+@use "../../components/" as c;
+/*--------------------------------------------------------------
+# ONFOCUS SECTION --- WisePanda.fr 
+--------------------------------------------------------------*/
+
+.onfocus{
+    padding: 0;
+    background: c.$color-default-dark;
+    .video-play{
+        min-height: 400px;
+        background: linear-gradient(
+            rgba(c.$color-default-dark, 0.4),
+            rgba(c.$color-default-dark, 0.7)
+        ), url(../img/onfocus/onfocus-video-bg.jpg) center center;
+        background-size: cover;
+    }
+    .content{
+        background: linear-gradient(
+            rgba(c.$color-default-dark, 0.5),
+            rgba(c.$color-default-dark, 0.8)
+        ), url(../img/onfocus/onfocus-content-bg.jpg) center center;
+        background-size: cover;
+        color: rgba(c.$color-default-dark, 0.8);
+        padding: 40px;
+        h3{
+            font-weight: 600;
+            font-size: 2rem;
+            color: c.$color-default;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            li{
+                padding-bottom: 10px;
+                i{
+                    font-size: 1.25rem;
+                    padding-right: 4px;
+                    color: c.$color-primary;
+                }
+            }
+        }
+        p:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Optimisation responcive
+
+@media (min-width:768px) {
+    .onfocus{
+        .content{
+            padding: 80px;
+        }
+    }
+}
