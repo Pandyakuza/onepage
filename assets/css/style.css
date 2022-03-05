@@ -11267,6 +11267,92 @@ textarea.form-control-lg {
   position: absolute;
   left: calc(50% - 47px);
   top: calc(50% - 47px);
+  overflow: hidden;
+}
+.btn--play::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation: pulsate-btn 2s;
+  animation: pulsate-btn 2s;
+  -webkit-animation-direction: forwards;
+  animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 5px solid rgba(69, 162, 158, 0.7);
+  top: -15%;
+  left: -15%;
+  background: #1f2833;
+}
+.btn--play::after {
+  content: "";
+  position: absolute;
+  left: calc(95% - 47px);
+  top: calc(90% - 47px);
+  transform: translatex(-40%), translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #ffffff;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.btn--play:hover::before {
+  content: "";
+  position: absolute;
+  left: calc(95% - 47px);
+  top: calc(90% - 47px);
+  transform: translatex(-40%), translateY(-40%);
+  width: 0;
+  height: 0;
+  border: none;
+  background: transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #ffffff;
+  z-index: 200;
+  -webkit-animation: none;
+  animation: none;
+  border-radius: 0;
+}
+.btn--play:hover::after {
+  border-left: 15px solid #45a29e;
+  transform: scale(20);
+}
+.btn--read-more {
+  font-family: "Hind Madurai", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #45a29e;
+  color: #ffffff;
+}
+.btn--read-more i {
+  font-size: 1.125rem;
+  margin-left: 5px;
+  line-height: 0;
+  transition: 0.3s;
+}
+.btn--read-more:hover {
+  background: rgba(69, 162, 158, 0.9);
+  color: #ffffff;
+  padding-right: 19px;
+}
+.btn--read-more:hover i {
+  margin-left: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -11283,6 +11369,26 @@ textarea.form-control-lg {
   }
   100% {
     transform: translateY(-10px);
+  }
+}
+@-webkit-keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
   }
 }
 /*--------------------------------------------------------------
