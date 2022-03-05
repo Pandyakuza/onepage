@@ -27,7 +27,7 @@
 }
 
 // d.flex justify-content-center align-items-center f.direction-col
-@mixin FlexCenterCenterCol {
+@mixin flexCenterCenterCol {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +42,7 @@
 }
 
 // d.flex justify-content-space-between align-items-center
-@mixin FlexBetweenCenter {
+@mixin flexBetweenCenter {
     display: flex;
     justify-content: space-between;
     align-items: center;
