@@ -1,3 +1,109 @@
+@use "../../components/" as c;
+
 /*--------------------------------------------------------------
-# PORTFOLIO SECTION --- WisePanda.fr 
+# PORTFOLIO SECTION --- WisePanda.fr
 --------------------------------------------------------------*/
+
+.portfolio{
+    .portfolio-filter{
+        padding: 0;
+        margin: 0 auto 30px auto;
+        list-style: none;
+        text-align: center;
+        li{
+            cursor: pointer;
+            display: inline-block;
+            padding: 0;
+            font-size: 1.125rem;
+            font-weight: 300;
+            margin: 0 10px;
+            line-height: 1;
+            margin-bottom: 5px;
+            transition: all 0.3s ease-in-out;
+            &:hover, &.filter-active{
+                color: c.$color-primary;
+            }
+            &:first-child{
+                margin-left: 0;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+    .portfolio-item {
+        position: relative;
+        border: 1px solid c.$color-primary-dark;
+        overflow: hidden;
+        z-index: 1;
+        img{
+            transition: all 0.3s;
+        }
+        &::before{
+            content: "";
+            inset:0;
+            position: absolute;
+            background: rgba(c.$wpfr-body-bg, 0.8);
+            z-index: 2;
+            transition: 0.5s;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .portfolio-info{
+            opacity: 0;
+            position: absolute;
+            inset: auto 40px 40px 40px;
+            z-index: 3;
+            padding: 20px;
+            h4{
+                font-size: 1.125rem;
+                font-weight: 600;
+                color: c.$color-default;
+                padding-right: 50px;
+                letter-spacing: 1px;
+            }
+            .preview-link, .details-link{
+                position: absolute;
+                right: 50px;
+                font-size: 1.5rem;
+                top: calc(50% - 14px);
+                color: rgba(c.$color-default, 0.7);
+                transition: 0.3s;
+                line-height: 0;
+                &:hover{
+                    color: c.$color-default;
+                }
+            }
+            .details-link{
+                right: 14px;
+                font-size: 1.75rem;
+            }
+        }
+        &:hover{
+            &::before{
+                visibility: visible;
+                opacity: 1;
+            }
+            img{
+                transform: scale(1.2);
+            }
+            .portfolio-info{
+                opacity: 1;
+                inset: auto 10px 0 10px;
+            }
+        }
+    }
+}
+
+// OPTIMISATION RWD
+
+@media (max-width:575px) {
+    .portfolio{
+        .portfolio-filter{
+            li{
+                font-size: 0.875rem;
+                margin: 0 5px;
+            }
+        }
+    }
+}
