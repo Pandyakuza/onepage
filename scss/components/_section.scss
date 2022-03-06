@@ -26,7 +26,9 @@ section{
 // Optimisation responcive Design
 
 @media (min-width:1280px){
+    .section-header{
     p{
         max-width: 80%;
     }
+}
 }

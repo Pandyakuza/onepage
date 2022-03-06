@@ -1,4 +1,73 @@
+@use "../../components/" as c;
+
 /*--------------------------------------------------------------
-# SERVICES SECTION --- WisePanda.fr 
+# SERVICES SECTION --- WisePanda.fr
 --------------------------------------------------------------*/
 
+.services{
+    .img{
+        &__services{
+            border-radius: 8px;
+            overflow: hidden;
+            img{
+                transition: 0.6s;
+            }
+        }
+    }
+}
+
+.details{
+    padding: 50px 30px;
+    margin: -100px 30px 0 30px;
+    transition: all ease-in-out 0.3s;
+    position: relative;
+    background: rgba(c.$color-default, 0.9);
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(c.$color-default-dark, 0.1);
+    .icon{
+        margin: 0;
+        width: 72px;
+        height: 72px;
+        background-color: c.$color-primary;
+        border-radius: 50%;
+        @include c.absoFlexCenterCenter;
+        margin-bottom: 20px;
+        color: c.$color-default;
+        font-size: 1.75rem;
+        transition: ease-in-out 0.3s;
+        top: -36px;
+        left: calc(50% - 36px);
+        border: 6px solid c.$color-default;
+    }
+    h3{
+        color: c.$color-default-dark;
+        font-weight: 700;
+        margin: 10px 0 15px 0;
+        font-size: 1.375rem;
+        transition: ease-in-out 0.3s;
+    }
+    p{
+        line-height: 24px;
+        font-size: 0.875rem;
+        margin-bottom: 0;
+        color: c.$wpfr-body-bg;
+    }
+}
+.service-item {
+    &:hover {
+        h3 {
+            color: c.$color-primary;
+        }
+        .icon {
+            background: c.$color-default;
+            border: 2px solid c.$color-primary;
+            i{
+                color: c.$color-primary;
+            }
+        }
+        img {
+            transform: scale(1.2);
+        }
+    }
+}
