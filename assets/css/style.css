@@ -12308,6 +12308,79 @@ section {
   }
 }
 /*--------------------------------------------------------------
+# TEAM SECTION --- WisePanda.fr
+--------------------------------------------------------------*/
+.team .team-member .img__team {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.team .team-member .member-info {
+  padding: 30px 15px;
+  text-align: center;
+  box-shadow: 0 2px 15px rgba(11, 12, 16, 0.1);
+  background-color: #ffffff;
+  margin: -50px 20px 0 20px;
+  position: relative;
+  border-radius: 8px;
+}
+.team .team-member .member-info h4 {
+  font-weight: 400;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  color: #485664;
+}
+.team .team-member .member-info span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #45a29e;
+}
+.team .team-member .member-info p {
+  font-style: italic;
+  font-size: 0.875rem;
+  line-height: 26;
+  color: #485664;
+}
+.team .team-member .member-info .social {
+  left: 0;
+  top: -18px;
+  right: 0;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team .team-member .member-info .social a {
+  transition: color 0.3s;
+  color: #ffffff;
+  background: #0189a1;
+  margin: 0 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.team .team-member .member-info .social a i {
+  line-height: 0;
+  font-size: 1rem;
+}
+.team .team-member .member-info .social a:hover {
+  background: #45a29e;
+}
+.team .team-member .member-info .social a:hover i {
+  font-size: 1.125rem;
+  margin: 0 2px;
+}
+.team .team-member:hover .social {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
 # INDEX STYLINGS --- WisePanda.fr
 --------------------------------------------------------------*/
 

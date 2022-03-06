@@ -1,4 +1,78 @@
+@use "../../components/" as c;
+
 /*--------------------------------------------------------------
-# TEAM SECTION --- WisePanda.fr 
+# TEAM SECTION --- WisePanda.fr
 --------------------------------------------------------------*/
 
+.team{
+    .team-member{
+        .img{
+            &__team {
+                border-radius: 8px;
+                overflow: hidden;
+            }
+        }
+        .member-info{
+            padding: 30px 15px;
+            text-align: center;
+            box-shadow: 0 2px 15px rgb(c.$color-default-dark, 0.1);
+            background-color: c.$color-default;
+            margin: -50px 20px 0 20px;
+            position: relative;
+            border-radius: 8px;
+            h4{
+                font-weight: 400;
+                margin-bottom: 5px;
+                font-size: 1.5rem;
+                color: c.$color-secondary;
+            }
+            span{
+                display: block;
+                font-size: 1rem;
+                font-weight: 400;
+                color: c.$color-primary;
+            }
+            p{
+                font-style: italic;
+                font-size: 0.875rem;
+                line-height: 26;
+                color: c.$color-secondary;
+            }
+            .social{
+                left: 0;
+                top: -18px;
+                right: 0;
+                opacity: 0;
+                transition: ease-in-out 0.3s;
+                @include c.absoFlexCenterCenter;
+                a{
+                    transition: color 0.3s;
+                    color: c.$color-default;
+                    background: c.$color-primary-dark;
+                    margin: 0 5px;
+                    @include c.inFlexCenterCenter;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    transition: 0.3s;
+                    i{
+                        line-height: 0;
+                        font-size: 1rem;
+                    }
+                    &:hover {
+                        background: c.$color-primary;
+                        i{
+                            font-size: 1.125rem;
+                            margin: 0 2px;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover{
+            .social{
+                opacity: 1;
+            }
+        }
+    }
+}
