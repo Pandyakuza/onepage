@@ -1,4 +1,77 @@
+@use "../../components/" as c;
+
 /*--------------------------------------------------------------
 # RECENT BLOG POSTS SECTION --- WisePanda.fr 
 --------------------------------------------------------------*/
 
+.recent-blog-post{
+    .post-box{
+        transition: 0.3s;
+        height: 100%;
+        overflow: hidden;
+        @include c.relaFlexCol;
+        .img{
+            &__post{
+                overflow: hidden;
+                position: relative;
+                border-radius: 10px;
+                img{
+                    transition: 0.5s;
+                }
+            }
+        }
+        .meta{
+            margin-top: 15px;
+            .post{
+                &-date{
+                    font-size: 0.938rem;
+                    font-weight: 400;
+                    color: c.$color-primary-light;
+                }
+                &-author{
+                    font-size: 0.938rem;
+                    font-weight: 400;
+                    color: c.$color-secondary-light;
+                }
+            }
+        }
+        .post-title{
+            font-size: 1.5rem;
+            color: c.$color-secondary-light;
+            font-weight: 700;
+            margin: 15px 0 0 0;
+            position: relative;
+            transition: 0.3s;
+            letter-spacing: 1px;
+        }
+        p{
+            margin: 15px 0 0 0;
+            color: rgba(c.$color-secondary-light, 0.7);
+        }
+        .readmore{
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            line-height: 1;
+            transition: 0.3s;
+            margin-top: 15px;
+            i{
+                line-height: 0;
+                margin-left: 4px;
+                font-size: 1.125rem;
+            }
+        }
+        &:hover{
+            .post-title{
+                color: c.$color-primary;
+            }
+            .img{
+                &__post{
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
