@@ -1,3 +1,83 @@
-/*--------------------------------------------------------------
-# F.A.Q SECTION --- WisePanda.fr 
---------------------------------------------------------------*/
+@use "../../components/" as c;
+// *--------------------------------------------------------------
+// #F.A.Q SECTION --- WisePanda.fr
+// --------------------------------------------------------------*/
+
+.faq{
+    .content{
+    h3{
+        font-weight: 400;
+        font-size: 2.125rem;
+        color: c.$color-default;
+        }
+        h4{
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 5px;
+        }
+        p{
+            font-size: 0.938rem;
+            color: c.$color-secondary-light;
+        }
+    }
+    .img {
+        &__faq{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            min-height: 400px;
+        }
+    }
+    .accordion-item{
+        border: 0;
+        margin-top: 15px;
+        box-shadow: 0 5px 25px 0 rgba(c.$color-default-dark, 0.06);
+        .accordion-button{
+            padding: 15px 40px 20px 60px;
+            font-weight: 600;
+            border: 0;
+            font-size: 1.125rem;
+            color: c.$color-default-dark;
+            text-align: left;
+            background: c.$color-default;
+            box-shadow: none;
+            border-radius: 5px;
+            &:not(.collapsed){
+                color: c.$color-primary;
+                border-bottom: 0;
+                box-shadow: none;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                color: c.$color-primary;
+            }
+            .question-icon{
+                position: absolute;
+                top: 14px;
+                left: 25px;
+                font-size: 1.25rem;
+                color: c.$color-primary;
+            }
+            .accordion-collapse{
+                border: 0;
+                .accordion-body{
+                    padding: 0 30px 25px 60px;
+                    border: 0;
+                    border-radius: 5px;
+                    background-color: c.$color-default;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+// OPTIMISATION RWD 
+@media (max-width: 991px){
+    .faq{
+        padding: 0;
+    }
+}
