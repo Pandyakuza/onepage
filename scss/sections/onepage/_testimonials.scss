@@ -1,3 +1,93 @@
+@use "../../components/" as c;
 /*--------------------------------------------------------------
 # TESTIMONIALS SECTION --- WisePanda.fr 
 --------------------------------------------------------------*/
+
+.testimonials{
+    padding: 80px 0;
+    background: url("../img/testimonials/testimonials-bg.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(c.$color-default-dark, 0.8);
+    }
+    .testimonials-slider{
+        overflow: hidden;
+        .testimonial-item{
+            text-align: center;
+            color: c.$color-default;
+            .img{
+                &__testimonials {
+                    width: 100px;
+                    border-radius: 50%;
+                    border: 6px solid rgba(c.$color-default, 0.15);
+                    margin: 0 auto;
+                }
+            }
+            h3{
+                font-size: 1.25rem;
+                font-weight: bold;
+                margin: 10px 0 5px 0;
+                color: c.$color-default;
+            }
+            h4{
+                font-size: 0.875rem;
+                color: rgba(c.$color-secondary-light, 0.6);
+                margin: 0 0 15px 0;
+            }
+            .stars{
+                margin-bottom: 15px;
+                i{
+                    color: c.$yellow;
+                    margin: 0 1px;
+                }
+
+
+            }
+            p {
+                font-style: italic;
+                margin: 0 auto 15px auto;
+                .quote-icon-left{
+                    display: inline-block;
+                    left: -5px;
+                    position: relative;
+                }
+                .quote-icon-right{
+                    display: inline-block;
+                    right: -5px;
+                    position: relative;
+                    top: 10px;
+                    transform: scale(-1, -1);
+                }
+            }
+            .swiper-pagination{
+                margin-top: 20px;
+                position: relative;
+                &-bullet{
+                    width: 12px;
+                    height: 12px;
+                    background-color: rgba(c.$color-default, 0.4);
+                    opacity: 0.5;
+                    &-active{
+                        background-color: c.$color-default;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// OPTIMISATION RDW 
+
+@media (min-width: 992px) {
+    .testimonial-item{
+        p{
+            width: 80%;
+        }
+    }
+}
