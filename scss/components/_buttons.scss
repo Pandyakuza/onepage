@@ -188,3 +188,31 @@
     }
 }
 }
+
+
+// Scroll to top btn
+
+.scroll-top{
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 995;
+    background: c.$color-primary-dark;
+    width: 40px;
+    height: 40px;
+    transition: all 0.4s;
+    i{
+        font-size: 1.5rem;
+        line-height: 0;
+        color: c.$color-default;
+    }
+    &:hover{
+        background: rgba(c.$color-primary-dark, 0.85);
+    }
+    &.active{
+        visibility: visible;
+        opacity: 1;
+    }
+}

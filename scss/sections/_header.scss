@@ -31,11 +31,9 @@
           color: c.$color-primary-light;
           font-weight: 500;
         }
-      span{
         &:last-child{
           color: c.$color-primary-dark;
           font-weight: 700;
-        }
       }
     }
   }
