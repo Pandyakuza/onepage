@@ -1478,7 +1478,7 @@
           <!-- Start ROW Contact   -->
           <div class="row gy-5 gx-lg-5">
             <div class="col-lg-4">
-              <div class="item-info d-flex " >
+              <div class="info" >
                 <h3>Restons en contact</h3>
                 <p>
                   Et id eius voluptates atque nihil voluptatem enim in tempore
@@ -1496,7 +1496,7 @@
 
                 <!-- Start Info Item 2  -->
                 <div class="item-info d-flex">
-                  <i class="bi bi-geo-envelope flex-shrink-0"></i>
+                  <i class="bi bi-envelope flex-shrink-0"></i>
                   <div>
                     <h4>Email:</h4>
                     <p>contact@wisepanda.fr</p>
@@ -1516,28 +1516,31 @@
               </div>
             </div>
             <!-- Start Contact Form -->
-            <div>
-              <form>
-                <div>
-                  <div>
-                    <input />
+            <div class="col-lg-8">
+              <form action="" method="post" role="form" class="php-email-form">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name"
+                    placeholder="Votre Nom" required/>
                   </div>
-                  <div>
-                    <input />
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" name="email" class="form-control" id="email"
+                    placeholder="Votre@email.com" required/>
                   </div>
                 </div>
-                <div>
-                  <input />
+                <div class="form-group mt-3" >
+                  <input type="text" class="form-control" name="subject" id="subject"
+                  placeholder="Sujet" required/>
                 </div>
-                <div>
-                  <textarea></textarea>
+                <div class="form-group mt-3" >
+                  <textarea class="form-control" name="message" placeholder="Message" required></textarea>
                 </div>
-                <div>
-                  <div>Chargement</div>
-                  <div></div>
-                  <div>Votre message a été envoyé. Merci!</div>
+                <div class="my-3">
+                  <div class="loading">Chargement</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Votre message a été envoyé. Merci!</div>
                 </div>
-                <div><button>Envoyer</button></div>
+                <div class="text-center"><button type="submit">Envoyer</button></div>
               </form>
             </div>
             <!-- End Contact Form -->

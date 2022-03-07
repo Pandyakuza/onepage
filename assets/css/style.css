@@ -11363,6 +11363,14 @@ textarea.form-control-lg {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
 @keyframes up-down {
   0% {
     transform: translateY(15px);
@@ -11389,6 +11397,22 @@ textarea.form-control-lg {
   100% {
     transform: scale(1, 1);
     opacity: 0;
+  }
+}
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 /*--------------------------------------------------------------
@@ -12446,8 +12470,126 @@ section {
 }
 
 /*--------------------------------------------------------------
-# CONTACT SECTION --- WisePanda.fr 
+# CONTACT SECTION --- WisePanda.fr
 --------------------------------------------------------------*/
+.contact .map {
+  margin-bottom: 40px;
+}
+.contact .map iframe {
+  border: 0;
+  width: 100%;
+  height: 400px;
+}
+.contact .info {
+  padding: 40px;
+  box-shadow: 0 2px 15px rgba(11, 12, 16, 0.1);
+  overflow: hidden;
+}
+.contact .info h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.contact .info p {
+  color: #c5c6c7;
+  margin-bottom: 30px;
+  font-size: 0.938rem;
+}
+.contact .info .item-info + .item-info {
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(72, 86, 100, 0.15);
+}
+.contact .info .item-info i {
+  font-size: 1.5rem;
+  color: #45a29e;
+  transition: all 0.3s ease-in-out;
+  margin-right: 20px;
+}
+.contact .info .item-info h4 {
+  padding: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #485664;
+}
+.contact .info .item-info p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  color: #c5c6c7;
+}
+.contact .php-email-form {
+  width: 100%;
+  background: #1f2833;
+}
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+.contact .php-email-form .error-message {
+  display: none;
+  color: #ffffff;
+  background: #dc3545;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+.contact .php-email-form .error-message br + br {
+  margin-top: 25px;
+}
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #ffffff;
+  background: #198754;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+.contact .php-email-form .loading {
+  display: none;
+  background: #ffffff;
+  text-align: center;
+  padding: 15px;
+}
+.contact .php-email-form .loading::before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #198754;
+  border-top-color: #ffffff;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+.contact .php-email-form input[type=text], .contact .php-email-form input[type=email], .contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 0.875rem;
+}
+.contact .php-email-form input[type=text]:focus, .contact .php-email-form input[type=email]:focus, .contact .php-email-form textarea:focus {
+  border-color: #c5c6c7;
+}
+.contact .php-email-form input[type=text], .contact .php-email-form input[type=email] {
+  height: 48px;
+  padding: 10px 15px;
+}
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+  height: 290px;
+}
+.contact .php-email-form button[type=submit] {
+  background: #45a29e;
+  border: 0;
+  padding: 13px 50px;
+  color: #ffffff;
+  border-radius: 0;
+}
+.contact .php-email-form button[type=submit]:hover {
+  background: rgba(69, 162, 158, 0.85);
+}
+
 /*--------------------------------------------------------------
 # INDEX STYLINGS --- WisePanda.fr
 --------------------------------------------------------------*/
