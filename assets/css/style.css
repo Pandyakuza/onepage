@@ -12591,6 +12591,150 @@ section {
 }
 
 /*--------------------------------------------------------------
+# FOOTER SECTION --- WisePanda.fr
+--------------------------------------------------------------*/
+.footer {
+  color: #ffffff;
+  font-size: 0.875rem;
+}
+.footer .footer-content {
+  background: #485664;
+  padding: 60px 0 30px 0;
+}
+.footer .footer-content .footer-info {
+  margin-bottom: 30px;
+}
+.footer .footer-content .footer-info h3 {
+  font-size: 1.75rem;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.footer .footer-content .footer-info h3 span {
+  color: #45a29e;
+}
+.footer .footer-content .footer-info p {
+  font-size: 0.875rem;
+  line-height: 24px;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+.footer .footer-content .footer-links {
+  margin-bottom: 30px;
+}
+.footer .footer-content .footer-links h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+.footer .footer-content .footer-links h4::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #45a29e;
+  bottom: 0;
+  left: 0;
+}
+.footer .footer-content .footer-links ul {
+  list-style: none;
+  overflow: 0;
+  margin: 0;
+}
+.footer .footer-content .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.footer .footer-content .footer-links ul li:first-child {
+  padding-top: 0;
+}
+.footer .footer-content .footer-links ul li i {
+  padding-right: 2px;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1;
+}
+.footer .footer-content .footer-links ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+.footer .footer-content .footer-links ul li a:hover {
+  color: #ffffff;
+}
+.footer .footer-content .footer-newsletter form {
+  margin-top: 30px;
+  background: #ffffff;
+  padding: 6px 10;
+  position: relative;
+  border-radius: 4px;
+}
+.footer .footer-content .footer-newsletter form input[type=email] {
+  border: 0;
+  padding: 4px;
+  width: calc(100% - 110px);
+}
+.footer .footer-content .footer-newsletter form input[type=email]:focus-visible {
+  outline: none;
+}
+.footer .footer-content .footer-newsletter form input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  bottom: 0;
+  border: 0;
+  background: none;
+  font-size: 1rem;
+  padding: 0 20px;
+  background: #45a29e;
+  color: #ffffff;
+  transition: 0.3s;
+  border-radius: 0 4px 4px 0;
+}
+.footer .footer-content .footer-newsletter form input[type=submit]:hover {
+  background: rgba(69, 162, 158, 0.85);
+}
+.footer .footer-legal {
+  padding: 30px 0;
+  background: #3a4853;
+}
+.footer .footer-legal .credits {
+  padding-top: 4px;
+  font-size: 0.875rem;
+  color: #ffffff;
+}
+.footer .footer-legal .credits a {
+  color: #66fcf1;
+}
+.footer .footer-legal .social-links a {
+  font-size: 1.125rem;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 4px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+.footer .footer-legal .social-links a:hover {
+  background: #45a29e;
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
 # INDEX STYLINGS --- WisePanda.fr
 --------------------------------------------------------------*/
 
