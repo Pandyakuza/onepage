@@ -47,7 +47,7 @@ document.addEventListener ("DOMContentLoaded", () =>{
         document.addEventListener("scroll", navbarlinksActive);
 
 
-        /** ---------------------------------Function scroll on Element tOp Offset------------------------------------*/
+        /** ---------------------------------Function scroll on Element top Offset------------------------------------*/
 
     function scrollto(el){
         const selectHeader = document.querySelector("#header");
@@ -57,11 +57,23 @@ document.addEventListener ("DOMContentLoaded", () =>{
             offset = document.querySelector("#header.sticked").offsetHeight;
         } else if (selectHeader.hasAttribute("data-scrollto-offset")) {
             offset = selectHeader.offsetHeight - parseInt(selectHeader.getAttribute("data-scrollto-offset"));
-
         }
         window.scrollTo({
-            top : document.querySelector(el).offsetTop - offse,
+            top : document.querySelector(el).offsetTop - offset,
             behavior : "smooth",
         });
     }
+
+/** ---------------------------------Scrollto function on click from Links------------------------------------*/
+    let selectScrollto = document.querySelectorAll(".scrollto");
+    selectScrollto.forEach((el) =>
+    el.addEventListener("click", function (event) {
+        if(document.querySelector(this.hash)) {
+            event.preventDefault();
+
+            scrollto(this.hash)
+        }
+    })
+    )
+
 });
