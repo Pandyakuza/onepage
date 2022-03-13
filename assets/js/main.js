@@ -70,10 +70,16 @@ document.addEventListener ("DOMContentLoaded", () =>{
     el.addEventListener("click", function (event) {
         if(document.querySelector(this.hash)) {
             event.preventDefault();
-
             scrollto(this.hash)
         }
     })
     )
-
+/** ---------------------------------Scrollto function From URL------------------------------------*/
+    window.addEventListener("load", () => {
+        if(window.location.hash){
+            if (document.querySelector(window.location.hash)){
+                scrollto(window.location.hash)
+            }
+        }
+    });
 });
