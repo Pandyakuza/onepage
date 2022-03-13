@@ -82,4 +82,15 @@ document.addEventListener ("DOMContentLoaded", () =>{
             }
         }
     });
+
+    /** ---------------------------------Mobile nav Toggle------------------------------------*/
+    const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
+    if (mobileNavToggle){
+        mobileNavToggle.addEventListener("click", function(event){
+            event.preventDefault();
+            document.querySelector("body").classList.toggle("mobile-nav-active");
+            this.classList.toggle("bi-list");
+            this.classList.toggle("bi-x")
+        })
+    }
 });
