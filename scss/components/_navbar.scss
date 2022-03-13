@@ -11,46 +11,46 @@
 --------------------------------------------------------------*/
 
 @media (min-width:1280px){
-    .navbar{
-        padding: 0;
-        ul{
-            @include m.flexCenterNone;
-            li{
-                position: relative;
+        .navbar{
+            padding: 0;
+            ul{
+                @include m.flexCenterNone;
+                li{
+                    position: relative;
+                }
             }
-        }
-        > ul > li {
-            white-space: nowrap;
-        }
-        a, a:focus{
-            @include m.relFlexBetweenCenter;
-            padding: 14px 20px;
-            font-family: f.$font-default;
-            font-size: 1rem;
-            font-weight: 400;
-            color: rgba(c.$color-default-dark, 0.7);
-            white-space: nowrap;
-            transition: 0.3s;
-        }
-        > ul > li > a:before{
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: c.$color-primary-dark;
-            visibility: hidden;
-            transform: scale(0);
-            transition: all 0.3s ease-in-out 0s;
-        }
-        a:hover:before, li:hover > a:before, .active:before {
-            visibility: visible;
-            transform: scale(0.7);
-        }
-        a:hover, .active, .active:focus, li:hover > a{
-            color: c.$color-primary-dark;
-        }
+            > ul > li {
+                white-space: nowrap;
+            }
+            a, a:focus{
+                @include m.relFlexBetweenCenter;
+                padding: 14px 20px;
+                font-family: f.$font-default;
+                font-size: 1rem;
+                font-weight: 400;
+                color: rgba(c.$color-default-dark, 0.7);
+                white-space: nowrap;
+                transition: 0.3s;
+            }
+            > ul > li > a::before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: c.$color-primary-dark;
+                visibility: hidden;
+                transform: scale(0);
+                transition: all 0.3s ease-in-out 0s;
+            }
+            a:hover:before, li:hover > a::before, .active::before {
+                visibility: visible;
+                transform: scale(0.7);
+            }
+            a:hover, .active, .active:focus, li:hover > a{
+                color: c.$color-primary-dark;
+            }
         }
     }
 
@@ -63,7 +63,7 @@
     .navbar{
         position: fixed;
         top: 0;
-        left: -100;
+        left: -100%;
         width: calc(100% - 70px);
         bottom: 0;
         transition: 0.3s;
@@ -118,7 +118,7 @@
         overflow: hidden;
         z-index: 9995;
         position: relative;
-        .navbar{
+        .navbar {
             left: 0;
             &::before{
                 content: "";

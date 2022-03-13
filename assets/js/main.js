@@ -45,4 +45,52 @@ document.addEventListener ("DOMContentLoaded", () =>{
     }
         window.addEventListener("load", navbarlinksActive);
         document.addEventListener("scroll", navbarlinksActive);
+
+
+        /** ---------------------------------Function scroll on Element top Offset------------------------------------*/
+
+    function scrollto(el){
+        const selectHeader = document.querySelector("#header");
+        let offset = 0;
+
+        if (selectHeader.classList.contains("sticked")){
+            offset = document.querySelector("#header.sticked").offsetHeight;
+        } else if (selectHeader.hasAttribute("data-scrollto-offset")) {
+            offset = selectHeader.offsetHeight - parseInt(selectHeader.getAttribute("data-scrollto-offset"));
+        }
+        window.scrollTo({
+            top : document.querySelector(el).offsetTop - offset,
+            behavior : "smooth",
+        });
+    }
+
+/** ---------------------------------Scrollto function on click from Links------------------------------------*/
+    let selectScrollto = document.querySelectorAll(".scrollto");
+    selectScrollto.forEach((el) =>
+    el.addEventListener("click", function (event) {
+        if(document.querySelector(this.hash)) {
+            event.preventDefault();
+            scrollto(this.hash)
+        }
+    })
+    )
+/** ---------------------------------Scrollto function From URL------------------------------------*/
+    window.addEventListener("load", () => {
+        if(window.location.hash){
+            if (document.querySelector(window.location.hash)){
+                scrollto(window.location.hash)
+            }
+        }
+    });
+
+    /** ---------------------------------Mobile nav Toggle------------------------------------*/
+    const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
+    if (mobileNavToggle){
+        mobileNavToggle.addEventListener("click", function(event){
+            event.preventDefault();
+            document.querySelector("body").classList.toggle("mobile-nav-active");
+            this.classList.toggle("bi-list");
+            this.classList.toggle("bi-x")
+        })
+    }
 });
