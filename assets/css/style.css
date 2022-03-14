@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*--------------------------------------------------------------
-# FONTS COMPONENTS --- WisePanda.fr
+# FONTS COMPONENTS --- WisePanda.fr 
 --------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;500;600;700&family=Teko:wght@400;500;600;700&display=swap");
 /*--------------------------------------------------------------
@@ -11564,7 +11564,7 @@ section {
     white-space: nowrap;
     transition: 0.3s;
   }
-  .navbar > ul > li > a:before {
+  .navbar > ul > li > a::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -11576,7 +11576,7 @@ section {
     transform: scale(0);
     transition: all 0.3s ease-in-out 0s;
   }
-  .navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
+  .navbar a:hover:before, .navbar li:hover > a::before, .navbar .active::before {
     visibility: visible;
     transform: scale(0.7);
   }
@@ -11591,7 +11591,7 @@ section {
   .navbar {
     position: fixed;
     top: 0;
-    left: -100;
+    left: -100%;
     width: calc(100% - 70px);
     bottom: 0;
     transition: 0.3s;
@@ -11607,7 +11607,7 @@ section {
     transition: 0.3s;
     z-index: 9998;
   }
-  .navbar a, .navbar a:focus {
+  .navbar ul a, .navbar ul a:focus {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -11619,12 +11619,12 @@ section {
     white-space: nowrap;
     transition: 0.3s;
   }
-  .navbar a i, .navbar a:focus i {
+  .navbar ul a i, .navbar ul a:focus i {
     font-size: 0.75rem;
     line-height: 0;
     margin-left: 5px;
   }
-  .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  .navbar ul a:hover, .navbar ul .active, .navbar ul .active:focus, .navbar ul li:hover > a {
     color: #ffffff;
   }
   .navbar .mobile-nav-toggle {

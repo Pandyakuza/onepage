@@ -77,23 +77,23 @@
             overflow-y: auto;
             transition: 0.3s;
             z-index: 9998;
-        }
-        a, a:focus{
-            @include m.relFlexBetweenCenter;
-            padding: 12px 20px;
-            font-size: 1rem;
-            font-weight: 500;
-            color: rgba(c.$color-default, 0.7);
-            white-space: nowrap;
-            transition: 0.3s;
-        }
-        a i, a:focus i {
-            font-size: 0.75rem;
-            line-height: 0;
-            margin-left: 5px;
-        }
-        a:hover, .active, .active:focus, li:hover > a{
-            color: c.$color-default;
+            a, a:focus{
+                @include m.relFlexBetweenCenter;
+                padding: 12px 20px;
+                font-size: 1rem;
+                font-weight: 500;
+                color: rgba(c.$color-default, 0.7);
+                white-space: nowrap;
+                transition: 0.3s;
+            }
+            a i, a:focus i {
+                font-size: 0.75rem;
+                line-height: 0;
+                margin-left: 5px;
+            }
+            a:hover, .active, .active:focus, li:hover > a{
+                color: c.$color-default;
+            }
         }
         .mobile-nav-toggle{
             display: block !important;
